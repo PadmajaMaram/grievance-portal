@@ -17,7 +17,7 @@ import "./Dashboard.css";
 
 function Dashboard() {
   const [userName, setUserName] = useState("User");
-  const [complaints, setComplaints] = useState([]);
+  const [, setComplaints] = useState([]);
   const [totalComplaints, setTotalComplaints] = useState(0);
   const [pending, setPending] = useState(0);
   const [resolved, setResolved] = useState(0);

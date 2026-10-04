@@ -65,7 +65,6 @@ function AdminDashboard() {
     low: [],
   });
   const [requests, setRequests] = useState([]);
-  const [requestLoading, setRequestLoading] = useState(false);
   const [processingRequestId, setProcessingRequestId] = useState(null);
   const [requestError, setRequestError] = useState("");
   const [loading, setLoading] = useState(true);
