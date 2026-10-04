@@ -179,9 +179,9 @@ function Dashboard() {
               <span className="stat-label-count">({totalComplaints})</span>
             </h3>
             <p className="stat-number stat-number-total">{totalComplaints}</p>
-            <a href="#" className="stat-link">
+            <button type="button" className="stat-link">
               View all →
-            </a>
+            </button>
           </div>
 
           <div className="stat-card stat-card-pending">
@@ -196,9 +196,9 @@ function Dashboard() {
               <span className="stat-label-count">({pending})</span>
             </h3>
             <p className="stat-number">{pending}</p>
-            <a href="#" className="stat-link">
+            <button type="button" className="stat-link">
               View details →
-            </a>
+            </button>
           </div>
 
           <div className="stat-card stat-card-resolved">
@@ -213,9 +213,9 @@ function Dashboard() {
               <span className="stat-label-count">({resolved})</span>
             </h3>
             <p className="stat-number">{resolved}</p>
-            <a href="#" className="stat-link">
+            <button type="button" className="stat-link">
               View history →
-            </a>
+            </button>
           </div>
         </div>
 

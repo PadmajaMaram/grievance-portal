@@ -45,21 +45,6 @@ function AdminDashboard() {
     { name: "Staff", value: categoryCounts.Staff, color: "#67e2a7" },
   ];
 
-  const polarToCartesian = (cx, cy, r, angleInDegrees) => {
-    const angleInRadians = ((angleInDegrees - 90) * Math.PI) / 180.0;
-    return {
-      x: cx + r * Math.cos(angleInRadians),
-      y: cy + r * Math.sin(angleInRadians),
-    };
-  };
-
-  const describeArc = (cx, cy, r, startAngle, endAngle) => {
-    const start = polarToCartesian(cx, cy, r, endAngle);
-    const end = polarToCartesian(cx, cy, r, startAngle);
-    const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
-    return `M ${start.x} ${start.y} A ${r} ${r} 0 ${largeArcFlag} 1 ${end.x} ${end.y} L ${cx} ${cy} Z`;
-  };
-
   const pieSegments = [];
   let currentAngle = 0;
   categoryData.forEach((item) => {

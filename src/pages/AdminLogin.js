@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaEnvelope, FaLock, FaRobot, FaSignInAlt } from "react-icons/fa";
+import { FaEnvelope, FaLock, FaRobot } from "react-icons/fa";
 import "./AdminLogin.css";
 
 function AdminLogin() {

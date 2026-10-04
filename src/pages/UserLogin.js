@@ -142,9 +142,9 @@ function UserLogin() {
           </button>
         </form>
 
-        <a href="#" className="forgot-password">
+        <button type="button" className="forgot-password">
           Forgot password?
-        </a>
+        </button>
 
         <div className="signup-line">
           <span>Don’t have an account?</span>
