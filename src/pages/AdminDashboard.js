@@ -198,7 +198,7 @@ function AdminDashboard() {
   async function fetchSupervisorRequests() {
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/admin/supervisor-requests/",
+        "https://grievance-portal-backend-e2b5.onrender.com/api/admin/supervisor-requests/",
       );
       const data = await response.json();
       if (data.status === "success") {
@@ -215,7 +215,7 @@ function AdminDashboard() {
     setRequestError("");
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/admin/supervisor-requests/${requestId}/`,
+        `https://grievance-portal-backend-e2b5.onrender.com/api/admin/supervisor-requests/${requestId}/`,
         {
           method: "POST",
           headers: {
