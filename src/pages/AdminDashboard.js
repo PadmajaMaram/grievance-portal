@@ -88,7 +88,9 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/complaints/");
+        const response = await fetch(
+          "https://grievance-portal-backend-e2b5.onrender.com/api/complaints/",
+        );
         const data = await response.json();
 
         if (data.status === "success") {

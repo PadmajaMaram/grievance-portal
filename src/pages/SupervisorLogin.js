@@ -66,7 +66,7 @@ function SupervisorLogin() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/supervisor/login/",
+        "https://grievance-portal-backend-e2b5.onrender.com/api/supervisor/",
         {
           method: "POST",
           headers: {

@@ -51,7 +51,7 @@ function SupervisorDepartmentPage() {
 
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/api/complaints/?department=${encodeURIComponent(
+          `https://grievance-portal-backend-e2b5.onrender.com/api/complaints/?department=${encodeURIComponent(
             department,
           )}`,
         );

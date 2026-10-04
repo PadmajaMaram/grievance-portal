@@ -33,13 +33,16 @@ function SupervisorDashboard() {
     );
     if (session?.sessionToken) {
       try {
-        await fetch("http://127.0.0.1:8000/api/supervisor/logout/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+        await fetch(
+          "https://grievance-portal-backend-e2b5.onrender.com/api/supervisor/logout/",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ session_token: session.sessionToken }),
           },
-          body: JSON.stringify({ session_token: session.sessionToken }),
-        });
+        );
       } catch (error) {
         console.error("Supervisor logout failed:", error);
       }

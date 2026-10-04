@@ -78,7 +78,9 @@ function TrackComplaint() {
   const fetchComplaints = async (email, complaintIdParam) => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/complaints/?user_email=${encodeURIComponent(email)}`,
+        `https://grievance-portal-backend-e2b5.onrender.com/api/complaints/?user_email=${encodeURIComponent(
+          email,
+        )}`,
       );
       const data = await response.json();
 
