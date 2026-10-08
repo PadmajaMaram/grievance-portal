@@ -12,6 +12,7 @@ function AdminLogin() {
   const allowedAdminEmails = [
     "yerukalareddymaram@gmail.com",
     "maramvenkatapadmaja@gmail.com",
+    "maramvenkatapadmajareddy@gmail.com",
   ];
 
   const handleSubmit = async (e) => {
@@ -27,6 +28,17 @@ function AdminLogin() {
       setMessage(
         "❌ Access denied. This admin portal only allows two authorized email addresses.",
       );
+      return;
+    }
+
+    const requiredPasswordForEmail = {
+      "maramvenkatapadmajareddy@gmail.com": "Padhu@2005",
+    };
+
+    const requiredPassword = requiredPasswordForEmail[normalizedEmail];
+    if (requiredPassword && password !== requiredPassword) {
+      setLoading(false);
+      setMessage("❌ Incorrect password for this admin account.");
       return;
     }
 
