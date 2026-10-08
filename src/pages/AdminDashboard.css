@@ -625,6 +625,53 @@
     width: 100%;
     justify-content: space-between;
   }
+
+  .overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .priority-grid,
+  .priority-details,
+  .pie-info {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .panel,
+  .recent-panel,
+  .quick-actions-panel {
+    padding: 18px;
+  }
+
+  .pie-total-card {
+    position: static;
+    width: min(100%, 180px);
+    margin-top: -12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-dashboard-page {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .admin-sidebar {
+    padding: 20px 16px;
+  }
+
+  .overview-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .admin-topbar h1 {
+    font-size: 26px;
+  }
+
+  .panel,
+  .recent-panel,
+  .quick-actions-panel {
+    padding: 14px;
+  }
 }
 h2 {
   color: #f4f7ff;

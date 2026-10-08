@@ -1,7 +1,10 @@
 .admin-login-page {
   min-height: 100vh;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   place-items: center;
+  position: relative;
+  overflow: hidden;
   background:
     radial-gradient(
       circle at top left,

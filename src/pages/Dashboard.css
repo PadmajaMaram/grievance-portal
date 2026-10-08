@@ -526,26 +526,40 @@
 @media (max-width: 768px) {
   .dashboard-container {
     flex-direction: column;
+    padding: 16px;
+    gap: 16px;
   }
 
   .sidebar {
     width: 100%;
     padding: 16px;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     gap: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
+  .logo-section-dash {
+    flex: 1 1 100%;
+  }
+
   .sidebar-nav {
     flex-direction: row;
-    flex: 1;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
     gap: 8px;
   }
 
   .nav-item {
+    flex: 1 1 150px;
     font-size: 12px;
     padding: 8px 12px;
+  }
+
+  .logout-btn {
+    align-self: auto;
+    margin-top: 0;
   }
 
   .main-content {
@@ -557,11 +571,34 @@
     align-items: flex-start;
   }
 
+  .header-left {
+    flex-wrap: wrap;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   }
 
   .actions-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 12px;
+  }
+
+  .welcome-section h1 {
+    font-size: 23px;
+  }
+
+  .stat-card {
+    padding: 20px;
   }
 }
